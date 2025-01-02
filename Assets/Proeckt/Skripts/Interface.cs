@@ -15,7 +15,7 @@ public class Interface : MonoBehaviour
     {
         YandexGame.NewLeaderboardScores("LEADER666", YandexGame.savesData.record);
         YandexGame.SaveProgress();
-        Sum(0, true, 0);
+        Sum(1, true, 0);
         if (rid == null)
         {
             rid = this;
@@ -31,7 +31,6 @@ public class Interface : MonoBehaviour
     }
     public void Sum(int index, bool cursor, float scale)
     {
-        Player_Muwer.rid.muwe = Vector3.zero;
         sumer[index].Invoke();
         CursorEvent(cursor);
         Time.timeScale = scale;

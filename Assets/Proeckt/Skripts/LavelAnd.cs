@@ -28,7 +28,6 @@ public class LavelAnd : MonoBehaviour {
     }
     public void Reclame() 
     {
-        Player_Muwer.rid.helse = 100;
         Interface.rid.Sum(0, true, 0);
         YandexGame.savesData.coins += 50;
     }
