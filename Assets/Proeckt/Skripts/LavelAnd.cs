@@ -29,7 +29,6 @@ public class LavelAnd : MonoBehaviour {
     public void Reclame() 
     {
         Interface.rid.Sum(1, true, 0);
-        YandexGame.savesData.coins += 50;
     }
     public void Reload()
     {

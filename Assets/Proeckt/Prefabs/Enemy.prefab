@@ -171,6 +171,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 5018322758456433768, guid: 4c6888a3f1f752c4f847498e9c7639da, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.04
+      objectReference: {fileID: 0}
     - target: {fileID: 5928523906296074848, guid: 4c6888a3f1f752c4f847498e9c7639da, type: 3}
       propertyPath: m_TagString
       value: Enemy
@@ -275,6 +279,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93f076e0b4cf42a4284c43acb2017114, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bodey: {fileID: 2301848816992727492}
   ps: {fileID: 3968304748266554656}
   enviroment: {fileID: 1028300517397824, guid: 3477fec71dd99b64f83a0316b4d5b4e5, type: 3}
   helse: 20

@@ -12,7 +12,7 @@ public class GI : MonoBehaviour
     {
         img.fillAmount = Gun.regit.relod / Gun.regit.relodTime;
         helse.fillAmount = Motor_Tank.regit.helse / 100;
-        hels.text = Motor_Tank.regit.helse + "%";
+        hels.text = (int)Motor_Tank.regit.helse + "%";
         amo.fillAmount = (float)Gun.regit.ammo / Gun.regit.max_Ammo;
         ammo.text = ""+ Gun.regit.ammo;
         hiscore.text = "" + YandexGame.savesData.record;

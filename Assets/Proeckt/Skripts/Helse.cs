@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Helse : MonoBehaviour
 {
+    public Transform bodey;
     public ParticleSystem ps;
     public GameObject enviroment;
     public float helse;
@@ -17,7 +18,7 @@ public class Helse : MonoBehaviour
         }
         else 
         {
-            Instantiate(enviroment, transform.position, Quaternion.identity);
+            Instantiate(enviroment, bodey.position, Quaternion.identity);
             Destroy(gameObject);
         }
     }
