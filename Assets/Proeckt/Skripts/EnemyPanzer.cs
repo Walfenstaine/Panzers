@@ -6,6 +6,7 @@ using static UnityEngine.GraphicsBuffer;
 
 public class EnemyPanzer : MonoBehaviour
 {
+    public Transform target;
     public ParticleSystem gun;
     public NavMeshAgent agent;
     public float speed;
@@ -17,7 +18,10 @@ public class EnemyPanzer : MonoBehaviour
     float run = 0;
     float timer = 0;
 
-
+    private void Awake()
+    {
+        agent.avoidancePriority = Random.Range(0,99);
+    }
     void Shut() 
     {
         RaycastHit hit;
@@ -32,10 +36,15 @@ public class EnemyPanzer : MonoBehaviour
         gun.Play();
     }
 
+    public void OnTarget(Transform t) 
+    {
+        target = t;
+    }
+
     void FixedUpdate()
     {
-        agent.destination = Motor_Tank.regit.transform.position;
-        if (Vector3.Distance(transform.position, Motor_Tank.regit.transform.position) <= 20) 
+        agent.destination = target.position;
+        if (Vector3.Distance(transform.position, Motor_Tank.regit.transform.position) <= 10) 
         {
             Vector3 nap = transform.position - Motor_Tank.regit.transform.position;
             bash.rotation = Quaternion.Lerp(bash.rotation, Quaternion.LookRotation(nap), 5 * Time.deltaTime);

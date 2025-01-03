@@ -6,14 +6,18 @@ public class Garaze : MonoBehaviour
 {
     public float interval;
     public GameObject instatiater;
-    public Transform emiter, antena;
+    public Transform emiter, antena, target;
     public Animator anim;
     float timer = 0;
     bool open = false;
 
     public void Emit() 
     {
-        Instantiate(instatiater, emiter.position, emiter.rotation);
+        GameObject g = Instantiate(instatiater);
+        g.transform.position = emiter.position;
+        g.transform.rotation = emiter.rotation;
+        g.GetComponent<EnemyPanzer>().OnTarget(target);
+        target = target.GetComponent<Point>().next;
     }
     public void OnOpen() 
     {
