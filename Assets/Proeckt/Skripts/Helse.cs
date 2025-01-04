@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.EventSystems;
 public class Helse : MonoBehaviour
 {
     public Transform bodey;
@@ -9,6 +9,13 @@ public class Helse : MonoBehaviour
     public GameObject enviroment;
     public float helse;
 
+    void OnMouseDown()
+
+    {
+
+        Gun.regit.target = transform;
+
+    }
     public void Damage(float d) 
     {
         if (d < helse)
@@ -18,8 +25,8 @@ public class Helse : MonoBehaviour
         }
         else 
         {
-            Instantiate(enviroment, bodey.position, Quaternion.identity);
-            Destroy(gameObject);
+            Instantiate(enviroment, transform.position, Quaternion.identity);
+            Destroy(bodey.gameObject);
         }
     }
 }

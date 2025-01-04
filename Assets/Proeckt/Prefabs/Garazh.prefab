@@ -490,6 +490,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c4ec014ba577804689420ef945c8d9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxCount: 2
+  panzers: []
   interval: 10
   instatiater: {fileID: 1493541278681492350, guid: 5db4902655913f84880c3f40b154f7e0, type: 3}
   emiter: {fileID: 4356864975390131277}

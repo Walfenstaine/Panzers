@@ -30,7 +30,7 @@ public class Gun : MonoBehaviour
 
     public void Shut() 
     {
-        if (ammo > 0) 
+        if (ammo > 0)
         {
             if (relod <= 0.1f)
             {
@@ -71,6 +71,6 @@ public class Gun : MonoBehaviour
         }
         Targeting.regit.tr = Quaternion.Angle(gunder.rotation, Quaternion.LookRotation(nap))/5;
 
-        gunder.rotation = Quaternion.Lerp(gunder.rotation, Quaternion.LookRotation(nap), 5 * Time.deltaTime);
+        gunder.rotation = Quaternion.Lerp(gunder.rotation, Quaternion.LookRotation(nap), 10 * Time.deltaTime);
     }
 }

@@ -8,10 +8,24 @@ public class Point : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        
         if (other.tag == "Enemy")
         {
-            other.GetComponentInParent<EnemyPanzer>().OnTarget(next);
-
+            if (next != null)
+            {
+                if (other.GetComponentInParent<EnemyPanzer>())
+                {
+                    other.GetComponentInParent<EnemyPanzer>().OnTarget(next);
+                }
+                if (other.GetComponentInParent<Mashin>())
+                {
+                    other.GetComponentInParent<Mashin>().OnTarget(next);
+                }
+            }
+            else 
+            {
+                Destroy(other.gameObject);
+            }  
         }
     }
 }

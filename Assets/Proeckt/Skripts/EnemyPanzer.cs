@@ -43,7 +43,18 @@ public class EnemyPanzer : MonoBehaviour
 
     void FixedUpdate()
     {
-        agent.destination = target.position;
+        if (agent.enabled)
+        {
+            if (target != null)
+            {
+                agent.destination = target.position;
+            }
+        }
+        else 
+        {
+            agent.enabled = true;
+        }
+        
         if (Vector3.Distance(transform.position, Motor_Tank.regit.transform.position) <= 10) 
         {
             Vector3 nap = transform.position - Motor_Tank.regit.transform.position;

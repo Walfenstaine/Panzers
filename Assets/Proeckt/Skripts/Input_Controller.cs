@@ -5,6 +5,7 @@ using YG;
 public class Input_Controller : MonoBehaviour
 {
     public GameObject joystyk;
+    Vector2 p;
     private void Start()
     {
         if (YandexGame.EnvironmentData.isDesktop)
@@ -23,19 +24,7 @@ public class Input_Controller : MonoBehaviour
     }
     public void Shuting() 
     {
-        RaycastHit hit;
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        if (Physics.Raycast(ray, out hit, 50))
-        {
-            if (hit.collider.tag == "Enemy")
-            {
-                Gun.regit.target = hit.collider.transform;
-            }
-            else
-            {
-                Gun.regit.Shut();
-            }
-        }
+        Gun.regit.Shut();
     }
     void Update()
     {
