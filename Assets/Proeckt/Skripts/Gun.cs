@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Gun : MonoBehaviour
 {
+    public AudioClip bum;
     public int ammo = 30;
     public int max_Ammo = 30;
     public float relod, relodTime;
@@ -32,8 +33,10 @@ public class Gun : MonoBehaviour
     {
         if (ammo > 0)
         {
+           
             if (relod <= 0.1f)
             {
+                SoundPlayer.regit.Play(bum);
                 ammo -= 1;
                 RaycastHit hit;
                 Ray ray = new Ray(gun.transform.position, gun.transform.forward);
@@ -47,6 +50,10 @@ public class Gun : MonoBehaviour
                 gun.Play();
                 relod = relodTime;
             }
+        }
+        else 
+        {
+            Interface.rid.Sum(3, true, 0);
         }
     }
     private void FixedUpdate()

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Loot : MonoBehaviour
 {
+    public AudioClip take;
     public LootIpe tipe;
     public enum LootIpe {bk, hill}
 
@@ -28,6 +29,7 @@ public class Loot : MonoBehaviour
                     Motor_Tank.regit.helse = 100;
                 }
             }
+            SoundPlayer.regit.Play(take);
             Destroy(gameObject);
         }
     }

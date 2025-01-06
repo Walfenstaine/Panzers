@@ -15,11 +15,19 @@ public class Point : MonoBehaviour
             {
                 if (other.GetComponentInParent<EnemyPanzer>())
                 {
-                    other.GetComponentInParent<EnemyPanzer>().OnTarget(next);
+                    if (other.GetComponentInParent<EnemyPanzer>().target == transform) 
+                    {
+                        other.GetComponentInParent<EnemyPanzer>().OnTarget(next);
+                    }
+                    
                 }
                 if (other.GetComponentInParent<Mashin>())
                 {
-                    other.GetComponentInParent<Mashin>().OnTarget(next);
+                    if (other.GetComponentInParent<Mashin>().target == transform) 
+                    {
+                        other.GetComponentInParent<Mashin>().OnTarget(next);
+                    }
+                        
                 }
             }
             else 

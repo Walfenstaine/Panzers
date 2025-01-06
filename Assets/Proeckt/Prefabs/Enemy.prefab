@@ -159,6 +159,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 4.728848e-18
       objectReference: {fileID: 0}
+    - target: {fileID: 378079104781425109, guid: 4c6888a3f1f752c4f847498e9c7639da, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a89593ab598f33641b1c03dcb243ff4e, type: 2}
     - target: {fileID: 919132149155446097, guid: 4c6888a3f1f752c4f847498e9c7639da, type: 3}
       propertyPath: m_Name
       value: Enemy
@@ -166,6 +170,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 4c6888a3f1f752c4f847498e9c7639da, type: 3}
       propertyPath: m_TagString
       value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 4543155705949613526, guid: 4c6888a3f1f752c4f847498e9c7639da, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4543155705949613526, guid: 4c6888a3f1f752c4f847498e9c7639da, type: 3}
       propertyPath: m_TagString
@@ -198,13 +206,16 @@ PrefabInstance:
       addedObject: {fileID: 3969477213406806186}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4c6888a3f1f752c4f847498e9c7639da, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 8568666073887619312}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4c6888a3f1f752c4f847498e9c7639da, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 3082342567257352225}
     - targetCorrespondingSourceObject: {fileID: 4543155705949613526, guid: 4c6888a3f1f752c4f847498e9c7639da, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5328428674210683678}
+    - targetCorrespondingSourceObject: {fileID: 4543155705949613526, guid: 4c6888a3f1f752c4f847498e9c7639da, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4772289275408803088}
+    - targetCorrespondingSourceObject: {fileID: 4543155705949613526, guid: 4c6888a3f1f752c4f847498e9c7639da, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4547774442569042838}
     - targetCorrespondingSourceObject: {fileID: 2921635538390907653, guid: 4c6888a3f1f752c4f847498e9c7639da, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7734323544192472907}
@@ -267,22 +278,6 @@ MonoBehaviour:
   muve: {x: 0, y: 0, z: 0}
   bodey: {fileID: 6764371203394210375}
   bash: {fileID: 823508478288624179}
---- !u!114 &8568666073887619312
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1493541278681492350}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93f076e0b4cf42a4284c43acb2017114, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bodey: {fileID: 2301848816992727492}
-  ps: {fileID: 3968304748266554656}
-  enviroment: {fileID: 1028300517397824, guid: 3477fec71dd99b64f83a0316b4d5b4e5, type: 3}
-  helse: 20
 --- !u!195 &3082342567257352225
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -336,6 +331,50 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.7430061, y: 1.5114112, z: 1.7717092}
   m_Center: {x: -0.00000023841858, y: 0.73867095, z: 0.0030056238}
+--- !u!54 &4772289275408803088
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2844021222911917049}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &4547774442569042838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2844021222911917049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93f076e0b4cf42a4284c43acb2017114, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bilding: 0
+  bodey: {fileID: 2301848816992727492}
+  ps: {fileID: 3968304748266554656}
+  enviroment: {fileID: 1028300517397824, guid: 3477fec71dd99b64f83a0316b4d5b4e5, type: 3}
+  helse: 13
 --- !u!1 &3526540859590716714 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2921635538390907653, guid: 4c6888a3f1f752c4f847498e9c7639da, type: 3}

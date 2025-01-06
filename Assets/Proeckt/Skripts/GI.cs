@@ -7,7 +7,7 @@ using YG;
 public class GI : MonoBehaviour
 {
     public Image img, helse, amo;
-    public Text hiscore, hels, ammo;
+    public Text hiscore, bilds, hels, ammo;
     private void FixedUpdate()
     {
         img.fillAmount = Gun.regit.relod / Gun.regit.relodTime;
@@ -15,6 +15,8 @@ public class GI : MonoBehaviour
         hels.text = (int)Motor_Tank.regit.helse + "%";
         amo.fillAmount = (float)Gun.regit.ammo / Gun.regit.max_Ammo;
         ammo.text = ""+ Gun.regit.ammo;
-        hiscore.text = "" + YandexGame.savesData.record;
+        string a = Interface.rid.bilds.ToString();
+        hiscore.text =  " / " + YandexGame.savesData.record;
+        bilds.text = "" + Interface.rid.bilds;
     }
 }

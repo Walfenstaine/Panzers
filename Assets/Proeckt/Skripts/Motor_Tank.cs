@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Motor_Tank : MonoBehaviour
 {
+    public AudioClip bem;
     public ParticleSystem ps;
     public Transform cam;
     public float speed, helse;
@@ -32,7 +33,7 @@ public class Motor_Tank : MonoBehaviour
     {
         ps.Play();
         cam.GetComponent<Animator>().SetTrigger("Kik");
-
+        SoundPlayer.regit.Play(bem);
 
         if (d < helse)
         {

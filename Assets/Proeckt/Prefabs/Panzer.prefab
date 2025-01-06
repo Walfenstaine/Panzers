@@ -129,7 +129,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4702046024392081000, guid: f56defb241dc25941a94013f9c06009b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.71
+      value: 0.793
       objectReference: {fileID: 0}
     - target: {fileID: 4702046024392081000, guid: f56defb241dc25941a94013f9c06009b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -265,9 +265,6 @@ PrefabInstance:
       addedObject: {fileID: 2687343038263452530}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4c6888a3f1f752c4f847498e9c7639da, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 7801459399204558030}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4c6888a3f1f752c4f847498e9c7639da, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 4053918134904769985}
     - targetCorrespondingSourceObject: {fileID: 4543155705949613526, guid: 4c6888a3f1f752c4f847498e9c7639da, type: 3}
       insertIndex: -1
@@ -370,19 +367,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 4
   m_CollisionDetection: 0
---- !u!114 &7801459399204558030
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5758701014557052854}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4dbcc0ac64e47cd45ad0202378106189, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  joystyk: {fileID: 0}
 --- !u!208 &4053918134904769985
 NavMeshObstacle:
   m_ObjectHideFlags: 0

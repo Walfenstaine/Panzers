@@ -13,9 +13,9 @@ public class Emiter : MonoBehaviour
     public void Emit()
     {
         GameObject g = Instantiate(emit);
-        g.transform.position = point.position;
-        g.transform.rotation = point.rotation;
-        g.GetComponent<Mashin>().OnTarget(point.GetComponent<Point>().next);
+        g.transform.position = transform.position;
+        g.transform.rotation = transform.rotation;
+        g.GetComponent<Mashin>().OnTarget(point);
     }
     private void FixedUpdate()
     {

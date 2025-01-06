@@ -18,10 +18,6 @@ public class Input_Controller : MonoBehaviour
         Motor_Tank.regit.muve = new Vector3(m.x, 0, m.y);
     }
 
-    public void Shut() 
-    {
-        Gun.regit.Shut();
-    }
     public void Shuting() 
     {
         Gun.regit.Shut();
@@ -32,10 +28,6 @@ public class Input_Controller : MonoBehaviour
         if (YandexGame.EnvironmentData.isDesktop) 
         {
             Motor_Tank.regit.muve = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-            if (Input.GetKeyDown(KeyCode.Mouse0))
-            {
-                Shuting();
-            }
         }
     }
 }

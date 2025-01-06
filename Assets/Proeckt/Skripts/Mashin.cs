@@ -19,13 +19,24 @@ public class Mashin : MonoBehaviour
     }
     void FixedUpdate()
     {
+        if (bodey == null)
+        {
+            Destroy(gameObject);
+        }
         agent.enabled = true;
         agent.destination = target.position;
         muve = agent.desiredVelocity;
         if (muve != Vector3.zero)
         {
             rb.AddForce(bodey.forward * speed);
-            bodey.rotation = Quaternion.Lerp(bodey.rotation, Quaternion.LookRotation(muve), Time.deltaTime);
+            if (bodey != null)
+            {
+                bodey.rotation = Quaternion.Lerp(bodey.rotation, Quaternion.LookRotation(muve), Time.deltaTime);
+            }
+            else 
+            {
+                Destroy(gameObject);
+            }
         }
     }
 }

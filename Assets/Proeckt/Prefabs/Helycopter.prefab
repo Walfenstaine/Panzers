@@ -353,6 +353,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93f076e0b4cf42a4284c43acb2017114, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bilding: 0
   bodey: {fileID: 255135650261215336}
   ps: {fileID: 433404203673008452}
   enviroment: {fileID: 1028300517397824, guid: 3477fec71dd99b64f83a0316b4d5b4e5, type: 3}

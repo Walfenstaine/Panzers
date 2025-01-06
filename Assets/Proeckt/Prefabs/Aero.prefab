@@ -10,15 +10,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 1f72238e7527db84787199a2b2f6c8c1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.1393805
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1f72238e7527db84787199a2b2f6c8c1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.00000023841858
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1f72238e7527db84787199a2b2f6c8c1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 5.7250633
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1f72238e7527db84787199a2b2f6c8c1, type: 3}
       propertyPath: m_LocalRotation.w
@@ -26,7 +26,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1f72238e7527db84787199a2b2f6c8c1, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1f72238e7527db84787199a2b2f6c8c1, type: 3}
       propertyPath: m_LocalRotation.y
@@ -34,7 +34,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1f72238e7527db84787199a2b2f6c8c1, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1f72238e7527db84787199a2b2f6c8c1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -162,9 +162,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e49970511d589a241980f9d291bcdd56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hely: {fileID: 0}
   helli: {fileID: 7012853299196365898, guid: d151a25ca6f23fd4bb2356af375a5cfd, type: 3}
   bodey: {fileID: 7380802227529635334}
-  interval: 40
+  interval: 20
   anim: {fileID: 6923110807932472906}
 --- !u!114 &4586249305025107632
 MonoBehaviour:
@@ -178,10 +179,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93f076e0b4cf42a4284c43acb2017114, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bilding: 1
   bodey: {fileID: 5090563445399601541}
   ps: {fileID: 5246674859164332033}
   enviroment: {fileID: 1028300517397824, guid: 3477fec71dd99b64f83a0316b4d5b4e5, type: 3}
-  helse: 100
+  helse: 20
 --- !u!1001 &4959272362964627154
 PrefabInstance:
   m_ObjectHideFlags: 0

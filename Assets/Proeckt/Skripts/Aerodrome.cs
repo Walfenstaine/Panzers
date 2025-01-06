@@ -4,22 +4,30 @@ using UnityEngine;
 
 public class Aerodrome : MonoBehaviour
 {
+    public GameObject hely;
     public GameObject helli;
     public Transform bodey;
     public float interval;
     public Animator anim;
-    float timer = 0;
-
+    bool active;
     public void Emit() 
     {
-        Instantiate(helli, bodey.position, bodey.rotation);
+        active = false;
+        hely = Instantiate(helli);
+        hely.transform.position = bodey.position;
+        hely.transform.rotation = bodey.rotation;
     }
     private void FixedUpdate()
     {
-        if (Time.time > timer) 
+        if (!active) 
         {
-            timer = Time.time + interval;
-            anim.SetTrigger("Start");
+            if (hely == null)
+            {
+                anim.SetTrigger("Start");
+                active = true;
+            }
         }
+       
+       
     }
 }

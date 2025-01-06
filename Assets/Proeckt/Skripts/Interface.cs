@@ -8,6 +8,7 @@ using YG;
 
 public class Interface : MonoBehaviour
 {
+    public int bilds;
     public UnityEvent[] sumer;
     public static Interface rid { get; set; }
 
@@ -37,7 +38,9 @@ public class Interface : MonoBehaviour
     }
     public void SaveGame() 
     {
-        
+        YandexGame.NewLeaderboardScores("LEADER666", YandexGame.savesData.record);
+        YandexGame.SaveProgress();
+
     }
 
     void CursorEvent(bool activ)
