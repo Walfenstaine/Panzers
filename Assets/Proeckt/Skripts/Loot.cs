@@ -1,36 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using YG;
 
 public class Loot : MonoBehaviour
 {
-    public AudioClip take;
-    public LootIpe tipe;
-    public enum LootIpe {bk, hill}
-
+    public int index_Icon;
+    public AudioClip clip;
     private void OnTriggerEnter(Collider other)
     {
-
-        if (other.tag == "Player")
+        if (other.tag == "Player" || other.tag == "Invise")
         {
-            if (tipe == LootIpe.bk)
+            if (index_Icon <= 2)
             {
-                Gun.regit.ammo += 10;
-
+                YandexGame.savesData.inv[index_Icon] += 1;
             }
             else 
             {
-                if (Motor_Tank.regit.helse < 70)
-                {
-                    Motor_Tank.regit.helse += 30;
-                }
-                else 
-                {
-                    Motor_Tank.regit.helse = 100;
-                }
+                YandexGame.savesData.coins += Random.Range(1,3);
             }
-            SoundPlayer.regit.Play(take);
+            SoundPlayer.regit.Play(clip);
+            
             Destroy(gameObject);
+            Interface.rid.SaveGame();
         }
     }
 }

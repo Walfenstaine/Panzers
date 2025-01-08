@@ -4,36 +4,50 @@ using UnityEngine;
 
 public class Point : MonoBehaviour
 {
+    public bool isLooter = false;
+    public GameObject klet;
     public Transform next;
-
-    private void OnTriggerEnter(Collider other)
+    public GameObject kitty;
+    public ParticleSystem ps;
+    public void Remaine() 
     {
-        
-        if (other.tag == "Enemy")
+        if (kitty != null)
         {
-            if (next != null)
+            if (isLooter)
             {
-                if (other.GetComponentInParent<EnemyPanzer>())
+                int i = Random.Range(0,4);
+                if (i == 2)
                 {
-                    if (other.GetComponentInParent<EnemyPanzer>().target == transform) 
-                    {
-                        other.GetComponentInParent<EnemyPanzer>().OnTarget(next);
-                    }
-                    
-                }
-                if (other.GetComponentInParent<Mashin>())
-                {
-                    if (other.GetComponentInParent<Mashin>().target == transform) 
-                    {
-                        other.GetComponentInParent<Mashin>().OnTarget(next);
-                    }
-                        
+                    Instantiate(kitty, transform.position, Quaternion.identity);
                 }
             }
             else 
             {
-                Destroy(other.gameObject);
-            }  
+                Instantiate(kitty, transform.position, Quaternion.identity);
+            }
+            
+           
+        }
+        else{
+            GetComponent<BoxCollider>().enabled = false;
+        }
+        klet.SetActive(false);
+        ps.Play();
+    }
+    public void Reload() 
+    {
+        klet.SetActive(true);
+        gameObject.tag = "Kitty";
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Enemy")
+        {
+            if (other.GetComponent<Enemy>().point == transform) 
+            {
+                other.GetComponent<Enemy>().OnPoint(next);
+            }
+           
         }
     }
 }

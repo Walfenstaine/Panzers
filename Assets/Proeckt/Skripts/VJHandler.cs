@@ -22,7 +22,7 @@ public class VJHandler : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoin
 
     void Awake()
     {
-            SetupHandle();
+        SetupHandle();
         joystickOutputEvent.Invoke(Vector2.zero);
     }
 
